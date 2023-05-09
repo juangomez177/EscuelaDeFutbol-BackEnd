@@ -1,0 +1,15 @@
+# Server properties
+server:
+  servlet:
+    context-path: /app_web_futbol
+  port: 8080
+
+# Spring properties
+spring:
+  application:
+    name: AsoFutbol
+  datasource:
+    url: jdbc:postgresql://containers-us-west-187.railway.app:5629/railway #jdbc:postgresql://<host>:<puerto>/<nombre de la base de datos>
+    username: postgres
+    password: 59RYzXestO9PdVy1GOtR
+    driverClassName: org.postgresql.Driver
