@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface AdmonRepository extends JpaRepository<Admon, Integer> {
 
-
+    List<Admon> findByNameContaining(String nombre_equipo);
 }

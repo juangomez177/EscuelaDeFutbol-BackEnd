@@ -40,18 +40,18 @@ public class AdmonController {
             @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
     public ResponseEntity<List<Admon>> getEquipos(){
         log.info("Rest request buscar Equipos");
-        return ResponseEntity.ok(admonService.getAdmon());
+        return ResponseEntity.ok(admonService.getEquipos());
     }
 
-    @GetMapping("buscar/{name}")
+    @GetMapping("buscar/{nombre_equipo}")
     @ApiOperation(value = "Equipos Encontrdaos",  response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Equipos encontrados exitosamente"),
             @ApiResponse(code = 400, message = "La petición es invalida"),
             @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
-    public ResponseEntity<List<Admon>> searchEquipos(@PathVariable String name){
+    public ResponseEntity<List<Admon>> searchEquipos(@PathVariable String nombre_equipo){
         log.info("Rest request buscar Equipos");
-        return ResponseEntity.ok(admonService.searchEquipos(name));
+        return ResponseEntity.ok(admonService.searchEquipos(nombre_equipo));
     }
 
 
@@ -88,7 +88,7 @@ public class AdmonController {
             @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
     public void deleteEquipo(@PathVariable Integer id){
         log.info("Rest request eliminar Equipo");
-        (admonService.deleteEquipo(id);
+        admonService.deleteEquipo(id);
     }
 
 
