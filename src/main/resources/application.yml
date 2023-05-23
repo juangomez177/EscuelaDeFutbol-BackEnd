@@ -9,7 +9,7 @@ spring:
   application:
     name: AsoFutbol
   datasource:
-    url: jdbc:postgresql://containers-us-west-187.railway.app:5629/railway #jdbc:postgresql://<host>:<puerto>/<nombre de la base de datos>
+    url: jdbc:postgresql://containers-us-west-186.railway.app:7939/railway #jdbc:postgresql://<host>:<puerto>/<nombre de la base de datos>
     username: postgres
-    password: 59RYzXestO9PdVy1GOtR
+    password: jBNjnzv0feCLpPcylbfX
     driverClassName: org.postgresql.Driver
