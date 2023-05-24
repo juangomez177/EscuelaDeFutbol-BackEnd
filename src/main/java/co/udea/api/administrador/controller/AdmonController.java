@@ -19,19 +19,23 @@ public class AdmonController {
 
     private AdmonService admonService;
 
-    public AdmonController(AdmonService admonService){ this.admonService = admonService;}
+    public AdmonController(AdmonService admonService) {
+        this.admonService = admonService;
+    }
 
     @GetMapping("{id}")
-    @ApiOperation(value = "Busca  por su id",  response = Admon.class)
+    @ApiOperation(value = "Busca  por su id", response = Admon.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Equipo encontrado existosamente"),
             @ApiResponse(code = 400, message = "La petición es invalida"),
             @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
-    public ResponseEntity<Admon> getAdmon(@PathVariable Integer id){
-        log.info("Rest request buscar Equipo por id: "+ id);
+    public ResponseEntity<Admon> getAdmon(@PathVariable Integer id) {
+        log.info("Rest request buscar Equipo por id: " + id);
         return ResponseEntity.ok(admonService.getAdmon(id));
     }
 
+
+    /*
     @GetMapping("")
     @ApiOperation(value = "Buscar todos los Equipos",  response = List.class)
     @ApiResponses(value = {
@@ -41,7 +45,9 @@ public class AdmonController {
     public ResponseEntity<List<Admon>> getEquipos(){
         log.info("Rest request buscar Equipos");
         return ResponseEntity.ok(admonService.getEquipos());
-    }
+    }*/
+
+    /*
 
     @GetMapping("buscar/{nombre_equipo}")
     @ApiOperation(value = "Equipos Encontrdaos",  response = List.class)
@@ -53,9 +59,11 @@ public class AdmonController {
         log.info("Rest request buscar Equipos");
         return ResponseEntity.ok(admonService.searchEquipos(nombre_equipo));
     }
+    */
 
 
     /** PUT: update the Equipo on the server */
+    /*
     @PutMapping()
     @ApiOperation(value = "Equipo actualizado",  response = List.class)
     @ApiResponses(value = {
@@ -65,9 +73,10 @@ public class AdmonController {
     public ResponseEntity<Admon> updateEquipo(@RequestBody Admon admon){
         log.info("Rest request actualizar Equipo");
         return ResponseEntity.ok(admonService.updateEquipo(admon));
-    }
+    }*/
 
     /** POST: add a new Equipo to the server */
+    /*
     @PostMapping ()
     @ApiOperation(value = "Agregar Equipo",  response = List.class)
     @ApiResponses(value = {
@@ -77,9 +86,11 @@ public class AdmonController {
     public ResponseEntity<Admon> addEquipo(@RequestBody Admon admon){
         log.info("Rest request agregar Equipo");
         return ResponseEntity.ok(admonService.addEquipo(admon));
-    }
+    }*/
 
     /** DELETE: delete the Equipo from the server */
+
+    /*
     @DeleteMapping("{id}")
     @ApiOperation(value = "Equipo eliminado",  response = List.class)
     @ApiResponses(value = {
@@ -91,7 +102,7 @@ public class AdmonController {
         admonService.deleteEquipo(id);
     }
 
-
-
-
+    */
 }
+
+

@@ -34,7 +34,7 @@ public class AdmonService {
         }
         return optionalAdmon.get();
     }
-
+    /*
     public List<Admon> getEquipos() {
         List<Admon> EquiposList = admonRepository.findAll();
         if (EquiposList.isEmpty()) {
@@ -43,7 +43,9 @@ public class AdmonService {
         }
         return EquiposList;
     }
+    */
 
+    /*
     public List<Admon> searchEquipos(String nombre_equipo) {
         List<Admon> equipos = admonRepository.findByNameContaining(nombre_equipo);
         if (equipos.isEmpty()) {
@@ -52,8 +54,8 @@ public class AdmonService {
         }
         return equipos;
 
-    }
-
+    }*/
+/*
         public Admon updateEquipo (Admon admon){
             Optional<Admon> optionalAdmon = admonRepository.findById(admon.getId());
             if (!optionalAdmon.isPresent()) {
@@ -62,7 +64,7 @@ public class AdmonService {
             }
             optionalAdmon.get().setNombre_equipo(admon.getNombre_equipo());
             return admonRepository.save(optionalAdmon.get());
-        }
+        }*/
 
 
     public Admon addEquipo(Admon admon){
@@ -70,7 +72,7 @@ public class AdmonService {
         return admonRepository.save(admon);
     }
 
-
+/*
     public void deleteEquipo(Integer id){
         Optional<Admon> optionalAdmon = admonRepository.findById(id);
         if(!optionalAdmon.isPresent()){
@@ -78,7 +80,7 @@ public class AdmonService {
             throw new BusinessException("No hay mensaje disponible para mostrar.");
         }
         admonRepository.delete(optionalAdmon.get());
-    }
+    }*/
 
 
 
